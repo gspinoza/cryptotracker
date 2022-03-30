@@ -1,0 +1,112 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/* REMEMBER CSS STYLES AFFECT ALL SAME ELEMENTS UNLESS YOU SPECIFY AN ID OF THE ELEMENT
+ * IN THE CHART CASE I DON'T SPECIFY ANY ID AS I ONLY HAVE ONE CHART AND THERE WILL BE NO ISSUE*/
+ 
+ 
+  /*
+  * HBOX PIE CHART
+  */
+  
+/* HBox RingChar NOTE: you can set the (CSS ID Specification) 
+ * from SceneBuilder or from the View.fxml or from java class just use "component.setId("id");
+ */
+#hboxringchartid {
+	-fx-background-color: #000000;
+}
+ 
+ /*
+  * PIE CHART
+  */
+  
+/* Chart */
+.chart {
+	/*-fx-padding: 10px;*/
+	-fx-background-color: transparent;
+	/*-fx-background-image: url("icon.png");*/
+}
+
+/* pie chart title font color & size */
+.chart-title {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 1.6em;
+}
+
+.chart-pie {
+	/* pie glossy colors*/                              /*white gradient intensity*/   /*color intensity (vibrance)*/
+	-fx-background-color: radial-gradient(radius 100%, derive(-fx-pie-color,25%), derive(-fx-pie-color,-1%));
+	/* Pie Color divider color*/
+	-fx-border-color: derive(-fx-pie-color,-1%);
+    
+}
+
+/* Legend background color*/
+.chart-legend {
+	-fx-background-color:  transparent;
+}
+
+/* Legend Symbol Border */
+.pie-legend-symbol.chart-pie {
+    -fx-border-color: null;
+}
+
+/* Legend font color */
+.chart-legend-item {
+    -fx-text-fill: #ffffff;
+}
+
+ /*
+  * TABLE VIEW
+  */
+ 
+  /* white text font specified with CSS ID for transactionsTable*/ 
+#transtablecssid .table-cell {
+	-fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.table-view {
+	-fx-selection-bar: #7751e0;
+	-fx-selection-bar-non-focused: #8b85bd;
+}
+
+.table-row-cell {
+    -fx-cell-size: 24px;
+}
+
+
+  /* white text font */ 
+/*.table-cell {
+	-fx-text-fill: white;
+    -fx-font-size: 14px;
+}*/
+
+/* darker */ 
+/*
+.table-row-cell:odd {
+	-fx-text-fill: #ffffff;
+	-fx-background-color: #0c0c0c;
+	-fx-border-color: transparent;
+}
+
+
+ /* lighter */ 
+/*.table-row-cell:even {
+ 	-fx-background-color: #312e2e;
+ 	-fx-border-color: transparent;
+}*/
+
+
+/*.table-view {
+	-fx-background-color: transparent;
+}*/
+
+.address > * {
+    -fx-fill: gray;
+    -fx-font-size: 9px;
+}
+
+.address > .line-1 {
+    -fx-fill: white;
+    -fx-font-size: 13px;
+}

@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #C42021;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spinoza.Controller">
+   <children>
+      <AnchorPane fx:id="MainAnchorPane" layoutX="123.0" prefHeight="430.0" prefWidth="577.0" style="-fx-background-color: #B5B5B5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="123.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox fx:id="hBoxBuyDialog" alignment="CENTER" prefHeight="595.0" prefWidth="977.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <DialogPane prefHeight="240.0" prefWidth="963.0" style="-fx-border-color: #000000;">
+                     <content>
+                        <AnchorPane prefHeight="255.0" prefWidth="961.0" style="-fx-background-color: #000000;">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="21.8" layoutY="21.8" prefHeight="142.0" prefWidth="939.0" spacing="5.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="80.0" prefWidth="217.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Date" textFill="WHITE" />
+                                          <JFXDatePicker fx:id="fxDatePickerBuyDate" defaultColor="#008f32" prefHeight="30.0" prefWidth="130.0" promptText="MM/DD/YY" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Time" textFill="WHITE" />
+                                          <JFXTextField fx:id="fxTextFieldBuyTime" prefHeight="30.0" prefWidth="190.0" promptText="HH:MM:SS AA" style="-fx-background-color: #ffff; -fx-prompt-text-fill: #c1c1c1;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="290.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="280.0" text="Cryptocurrency" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXComboBox fx:id="fxComboBoxCoinsBuy" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="250.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Quantity" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldBuyQuantity" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Rate (USD): " textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldBuyRate" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Price" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldBuyPrice" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="160.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Fee" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldBuyFee" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Overall Cost" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldBuyOverallCost" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="217.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Memo" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextArea fx:id="fxTextAreaBuyMemo" prefHeight="70.0" prefWidth="108.0" style="-fx-background-color: #fff;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="fxButtonCancelBuy" layoutX="399.0" layoutY="144.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #69676E;" text="Cancel" textFill="WHITE" />
+                              <JFXButton fx:id="fxButtonSaveBuy" layoutX="492.0" layoutY="144.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #31D843;" text="Save" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <header>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="505.0" style="-fx-background-color: #31D843;">
+                           <children>
+                              <Label text="Buy Cryptocurrency" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </header>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="-22.0" />
+                     </padding>
+                  </DialogPane>
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxSellDialog" alignment="CENTER" prefHeight="595.0" prefWidth="977.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <DialogPane prefHeight="240.0" prefWidth="963.0" style="-fx-border-color: #000000;">
+                     <content>
+                        <AnchorPane prefHeight="255.0" prefWidth="961.0" style="-fx-background-color: #000000;">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="21.8" layoutY="21.8" prefHeight="142.0" prefWidth="939.0" spacing="5.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="80.0" prefWidth="217.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Date" textFill="WHITE" />
+                                          <JFXDatePicker fx:id="fxDatePickerSellDate" defaultColor="#008f32" prefHeight="30.0" prefWidth="130.0" promptText="MM/DD/YY" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Time" textFill="WHITE" />
+                                          <JFXTextField fx:id="fxTextFieldSellTime" prefHeight="30.0" prefWidth="190.0" promptText="HH:MM:SS AA" style="-fx-background-color: #ffff; -fx-prompt-text-fill: #c1c1c1;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="290.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="280.0" text="Cryptocurrency" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXComboBox fx:id="fxComboBoxCoinsSell" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="250.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Quantity" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldSellQuantity" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Rate (USD): " textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldSellRate" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Price" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldSellPrice" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="160.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Fee" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldSellFee" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Overall Cost" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldSellOverallCost" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="217.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Memo" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextArea fx:id="fxTextAreaSellMemo" prefHeight="70.0" prefWidth="108.0" style="-fx-background-color: #fff;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="fxButtonCancelSell" layoutX="399.0" layoutY="144.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #69676E;" text="Cancel" textFill="WHITE" />
+                              <JFXButton fx:id="fxButtonSaveSell" layoutX="492.0" layoutY="144.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E71D36;" text="Save" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <header>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="505.0" style="-fx-background-color: #E71D36;">
+                           <children>
+                              <Label text="Sell Cryptocurrency" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </header>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="-22.0" />
+                     </padding>
+                  </DialogPane>
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxTradeDialog" alignment="CENTER" prefHeight="595.0" prefWidth="977.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <DialogPane prefHeight="250.0" prefWidth="963.0" style="-fx-border-color: #000000;">
+                     <content>
+                        <AnchorPane prefHeight="255.0" prefWidth="961.0" style="-fx-background-color: #000000;">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="21.8" layoutY="21.8" prefHeight="142.0" prefWidth="939.0" spacing="5.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox prefHeight="80.0" prefWidth="217.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Date" textFill="WHITE" />
+                                          <JFXDatePicker fx:id="fxDatePickerTradeDate" defaultColor="#008f32" prefHeight="30.0" prefWidth="130.0" promptText="MM/DD/YY" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Time" textFill="WHITE" />
+                                          <JFXTextField fx:id="fxTextFieldTradeTime" prefHeight="30.0" prefWidth="190.0" promptText="HH:MM:SS AA" style="-fx-background-color: #ffff; -fx-prompt-text-fill: #c1c1c1;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="290.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="280.0" text="Cryptocurrency Buying" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXComboBox fx:id="fxComboBoxCoinsTradeBuy" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #ffff;" />
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="280.0" text="Cryptocurrency Selling" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXComboBox fx:id="fxComboBoxCoinsTradeSell" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="250.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Quantity Buying" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradeQuantityBuying" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Quantity Selling" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradeQuantitySelling" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Rate (USD)" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradeRateBuying" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Rate (USD)" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradeRateSelling" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Price" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradePrice" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="160.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Fee" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradeFee" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="185.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Overall Cost" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextField fx:id="fxTextFieldTradeOverallCost" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #ffff;" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="80.0" prefWidth="217.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="30.0" prefWidth="130.0" text="Memo" textFill="WHITE">
+                                             <padding>
+                                                <Insets top="5.0" />
+                                             </padding>
+                                          </Label>
+                                          <JFXTextArea fx:id="fxTextAreaTradeMemo" prefHeight="70.0" prefWidth="108.0" style="-fx-background-color: #fff;" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <JFXButton fx:id="fxButtonCancelTrade" layoutX="399.0" layoutY="162.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #69676E;" text="Cancel" textFill="WHITE" />
+                              <JFXButton fx:id="fxButtonSaveTrade" layoutX="492.0" layoutY="162.0" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00B7E9;" text="Save" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                     <header>
+                        <HBox alignment="CENTER" prefHeight="37.0" prefWidth="505.0" style="-fx-background-color: #00B7E9;">
+                           <children>
+                              <Label text="Trade Cryptocurrency" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </header>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="-22.0" />
+                     </padding>
+                  </DialogPane>
+               </children>
+            </HBox>
+            <BorderPane fx:id="borderPanePortfolio" prefHeight="430.0" prefWidth="577.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox id="hboxringchartid" fx:id="hBoxRing" alignment="CENTER" prefHeight="320.0" prefWidth="577.0" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <TableView fx:id="portfolioTable" prefHeight="211.0" prefWidth="577.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="columnPortfolioCoin" prefWidth="75.0" text="Cryptocurrency" />
+                        <TableColumn fx:id="columnPortfolioPrice" prefWidth="75.0" text="Current Price" />
+                        <TableColumn fx:id="columnPortfolioHoldings" prefWidth="75.0" text="Holding" />
+                        <TableColumn fx:id="columnPortfolioValuation" prefWidth="75.0" text="Current Valuation" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </center>
+            </BorderPane>
+            <VBox fx:id="vBoxSettings" prefHeight="430.0" prefWidth="577.0" style="-fx-background-color: #2d2a3c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox fx:id="hBoxInnerRow" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelFloat" prefHeight="100.0" prefWidth="292.0" text="              Window aways on top:" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="alwaysOnTopButton" onAction="#handleButtonAction" toggleColor="#66ff33" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hBoxInnerRow1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelFloat1" prefHeight="100.0" prefWidth="292.0" text="Label" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hBoxInnerRow2" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelFloat2" prefHeight="100.0" prefWidth="292.0" text="Label" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hBoxInnerRow3" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelFloat3" prefHeight="100.0" prefWidth="292.0" text="Label" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hBoxInnerRow4" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelFloat4" prefHeight="100.0" prefWidth="292.0" text="Label" textAlignment="RIGHT" textFill="WHITE">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <BorderPane fx:id="borderPaneTransactions" prefHeight="430.0" prefWidth="577.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <bottom>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="577.0" spacing="25.0" style="-fx-background-color: #111111;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label contentDisplay="RIGHT" text="Total Transactions:" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <Label fx:id="totalTransactionsLabel" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="1.0" text="Total Gains: " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <Label fx:id="totalGainsLabel" text="0.00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="1.0" text="Total Losses: " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <Label fx:id="totalLossesLabel" text="0.00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="1.0" text="Total Fees: " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <graphic>
+                              <Label fx:id="totalFeesLabel" text="0.00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" graphicTextGap="1.0" text="Final Net Gains/Losses: " textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <Label fx:id="FinalNetGainsLossesLabel" text="0.00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </graphic>
+                        </Label>
+                     </children></HBox>
+               </bottom>
+               <top>
+                  <HBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="577.0" style="-fx-background-color: #111111;" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="fxButtonBuy" alignment="CENTER" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #31D843;" text="Buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" top="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="fxButtonSell" alignment="CENTER" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #E71D36;" text="Sell" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" top="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="fxButtonTrade" alignment="CENTER" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #00B7E9;" text="Trade" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="15.0" top="15.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin></HBox>
+               </top>
+               <center>
+                  <TableView id="transtablecssid" fx:id="transactionsTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="tableColumnDate" prefWidth="75.0" text="Date" />
+                      <TableColumn fx:id="tableColumnExchangeSite" prefWidth="75.0" text="Exchange Site" />
+                        <TableColumn fx:id="tableColumnExchange" prefWidth="75.0" text="Exchange" />
+                        <TableColumn fx:id="tableColumnType" prefWidth="75.0" text="Type" />
+                        <TableColumn fx:id="tableColumnQuantity" prefWidth="75.0" text="Quantity" />
+                        <TableColumn fx:id="tableColumnRate" prefWidth="75.0" text="Rate (USD)" />
+                        <TableColumn fx:id="tableColumnSubTotal" prefWidth="75.0" text="SubTotal" />
+                        <TableColumn fx:id="tableColumnFee" prefWidth="75.0" text="Fee" />
+                        <TableColumn fx:id="tableColumnTotal" prefWidth="75.0" text="Total" />
+                        <TableColumn fx:id="tableColumnGainLoss" prefWidth="75.0" text="Profit/Loss" />
+                        <TableColumn fx:id="tableColumnMemo" prefWidth="75.0" text="Memo" />
+                        <TableColumn fx:id="tableColumnHoldings" prefWidth="75.0" text="Holding Status" />
+                        <TableColumn fx:id="tableColumnLivePrice" prefWidth="75.0" text="Holding Price" />
+                        <TableColumn fx:id="tableColumnTradeId" prefWidth="75.0" text="Trade ID" />
+                        <TableColumn fx:id="tableColumnAction" prefWidth="75.0" text="Action" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="430.0" prefWidth="123.0" style="-fx-background-color: #393939;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="fxButtonPortfolio" layoutY="72.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="123.0" text="Portfolio" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="fxButtonTransactions" layoutY="122.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="123.0" text="Transactions" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="fxButtonSettings" layoutY="172.0" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="123.0" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
